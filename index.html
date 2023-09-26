@@ -29,7 +29,7 @@
     <div class="inner">
       <div class="item">
         <img src="img/logo.png" alt="" class="img">
-        <button class="btn" id="btn1">Add</button>
+        <button class="btn" id="btn1" onclick="showAlertMsg()">Add</button>
       </div>
       <div class="item">
         <img src="img/logo.png" alt="" class="img">
@@ -69,8 +69,15 @@
   <script src="app.js"></script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 <script>
+  window.Telegram.WebApp.MainButton.isVisible=true
   window.Telegram.WebApp.MainButton.text="测试";
   window.Telegram.WebApp.BackButton.isVisible=true
+
+  function showAlertMsg() {
+    window.Telegram.WebApp.showAlert("dialog",{
+
+    })
+  }
 </script>
 </body>
 
